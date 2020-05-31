@@ -1,20 +1,51 @@
 {
-  "name": "thiagotec",
+  "name": "thiagotec-2.0",
+  "private": true,
+  "description": "A portfolio & blog personal app",
   "version": "1.0.0",
-  "description": "Site pessoal para mostar o meu portifolio de trabalho",
-  "main": "index.js",
-  "homepage": "https://thienry.github.io/site",
-  "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
-  },
-  "author": "Thiago Moura",
-  "license": "MIT",
+  "author": "Thiago Moura <thmoura14@gmail.com>",
   "dependencies": {
-    "animate.css": "^3.6.1",
-    "node-sass": "^4.9.2"
+    "gatsby": "^2.21.37",
+    "gatsby-image": "^2.4.4",
+    "gatsby-plugin-manifest": "^2.4.5",
+    "gatsby-plugin-offline": "^3.2.3",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-sharp": "^2.6.4",
+    "gatsby-plugin-sitemap": "^2.4.3",
+    "gatsby-source-filesystem": "^2.3.4",
+    "gatsby-source-instagram": "^0.7.0",
+    "gatsby-source-strapi": "^0.0.12",
+    "gatsby-transformer-sharp": "^2.5.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.0.0",
+    "react-icons": "^3.10.0",
+    "react-markdown": "^4.3.1"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0"
+    "prettier": "2.0.5"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby clean && gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
