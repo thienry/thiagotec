@@ -9,7 +9,7 @@ function ProjectsPage({ data }) {
   const { allStrapiProjects: { nodes: projects } } = data
 
   return (
-    <Layout>
+    <Layout styleNav='nav-bg-color'>
       <SEO title='Projetos' />
       <section className="projects-page">
         <Projects projects={projects} title='Projetos' />

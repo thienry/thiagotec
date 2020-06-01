@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, styleNav }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="content">
-        <Navbar toggleSidebar={toggleSidebar} siteTitle={data.site.siteMetadata.title} />
+        <Navbar styleNav={styleNav} toggleSidebar={toggleSidebar} siteTitle={data.site.siteMetadata.title} />
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         <main>{children}</main>
       </div>

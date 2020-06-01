@@ -218,12 +218,20 @@ Navbar
   top: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition);
   z-index: 200;
-  background: var(--clr-primary-1);
+  background: transparent;
+}
+.nav-bg-color {
+  background: var(--clr-primary-2);
+}
+nav.sticky {
+  height: 4rem;
+  background: var(--clr-primary-2);
 }
 .nav-center {
   width: 90vw;
@@ -301,7 +309,10 @@ Navbar
 
 @media screen and (min-width: 992px) {
   .navbar {
-    background: var(--clr-primary-1);
+    background: transparent;
+  }
+  .nav-bg-color {
+    background: var(--clr-primary-2);
   }
 }
 /*

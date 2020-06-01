@@ -5,7 +5,7 @@ import Layout from '../components/layout/layout'
 import SEO from '../components/utils/seo'
 
 const NotFoundPage = () => (
-  <Layout>
+  <Layout styleNav='nav-bg-color'>
     <SEO title="404: Not found" />
     <main className="error-page">
       <div className="error-container">

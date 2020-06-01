@@ -5,7 +5,7 @@ import SEO from '../components/utils/seo'
 
 function Contact() {
   return (
-    <Layout>
+    <Layout styleNav='nav-bg-color'>
       <SEO title='Contato' />
       <section className="contact-page">
         <article className="contact-form">
