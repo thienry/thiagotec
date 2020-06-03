@@ -19,10 +19,10 @@ function Project({ description, name, github, url, tech, image, idx }) {
         </div>
         
         <div className="project-links">
-          <a href={github}>
+          <a href={github} target="_blank" rel="noreferrer">
             <FaGithubSquare className="project-icon" />
           </a>
-          <a href={url}>
+          <a href={url} target="_blank" rel="noreferrer">
             <FaShareSquare className="project-icon" />
           </a>
         </div>

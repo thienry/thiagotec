@@ -9,7 +9,7 @@ function blogPage({ data }) {
   const { allStrapiBlogs: { nodes: blogs } } = data
 
   return (
-    <Layout styleNav='nav-bg-color'>
+    <Layout styleContainer="page-container" styleNav='nav-bg-color'>
       <SEO title='Blog' />
       <section className="blog-page">
         <Blogs blogs={blogs} title="blog" />

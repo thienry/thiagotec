@@ -153,6 +153,11 @@ p {
   margin: 0 auto;
   margin-top: 3rem;
 }
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* section */
 .section {
   padding: 5rem 0;
@@ -163,7 +168,7 @@ p {
 }
 .section-center {
   width: 90vw;
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 1170px;
 }
 @media screen and (min-width: 992px) {
@@ -760,6 +765,10 @@ Projects
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
+  margin-top: .5rem;
+}
+.about-stack span:last-child {
+  margin-bottom: 1rem;
 }
 .about-stack span {
   margin-top: 0.5rem;
@@ -992,9 +1001,6 @@ Blog Page
 About Page
 ===============
 */
-.about-page {
-  padding: 7rem 0;
-}
 .about-img {
   margin-bottom: 2rem;
   height: 25rem;
@@ -1051,7 +1057,6 @@ Contact Page
 .contact-page {
   display: grid;
   place-items: center;
-  padding: 5rem 0;
 }
 .contact-form {
   background: var(--clr-white);

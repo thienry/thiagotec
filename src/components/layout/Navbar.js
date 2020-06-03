@@ -7,6 +7,11 @@ import PageLinks from '../../constants/links'
 
 function Navbar({ siteTitle, toggleSidebar, styleNav }) {
   useEffect(() => {
+    window.addEventListener('load', () => {
+      const navScroll = document.querySelector('nav')
+      navScroll.classList.add('sticky', window.scrollY > 0)
+    })
+
     window.addEventListener('scroll', () => {
       const navScroll = document.querySelector('nav')
       navScroll.classList.toggle('sticky', window.scrollY > 0)

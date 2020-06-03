@@ -9,7 +9,7 @@ function blogTemplate({ data }) {
   const { content, title, description } = data.blog
 
   return (
-    <Layout styleNav='nav-bg-color'>
+    <Layout styleContainer="page-container" styleNav='nav-bg-color'>
       <SEO title={title} description={description} />
       <section className="blog-template">
         <div className="section-center blog-post">

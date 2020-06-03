@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 
 import Title from '../layout/Title'
@@ -56,9 +56,6 @@ function Jobs() {
           ))}
         </article>
       </div>
-      <Link to="/sobre" className="btn center-btn">
-        Saiba mais
-      </Link>
     </section>
   )
 }

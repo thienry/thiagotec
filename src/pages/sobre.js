@@ -10,7 +10,7 @@ const about = ({ data: { allStrapiAbout: { nodes } } }) => {
   const { info, techs, title, image } = nodes[0]
 
   return (
-    <Layout styleNav='nav-bg-color'>
+    <Layout styleContainer="page-container" styleNav='nav-bg-color'>
       <SEO title='Sobre' />
       <section className="about-page">
         <div className="section-center about-center">
