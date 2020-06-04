@@ -1088,6 +1088,13 @@ Contact Page
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
+.form-validation {
+  float: left;
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  margin-top: -1rem;
+  color: var(--clr-primary-4);
+}
 .form-control::placeholder {
   font-family: var(--ff-primary);
   color: var(--clr-grey-1);
