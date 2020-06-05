@@ -5948,6 +5948,11 @@ gatsby-page-utils@^0.2.3:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-disqus@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-disqus/-/gatsby-plugin-disqus-1.1.7.tgz#66910da8be1219ab861ac96400edbed5abe33812"
+  integrity sha512-7gAoSdXzFtVJ5TjTYJv/crgq8wfKavRIxhd2UHTgsbzp3EOwqygs7u1hiko2BwGFROjmmhzkdRqCquKdo7oywg==
+
 gatsby-plugin-manifest@^2.4.5:
   version "2.4.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.5.tgz#d6dc8e58b5c022ffaf4b6967474dbf1e0e0eeacc"

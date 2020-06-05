@@ -64,6 +64,12 @@ module.exports = {
       },
       resolve: `gatsby-plugin-sitemap`,
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `thiagotec-com-1`
+      }
+    },
     /*{
       resolve: `gatsby-source-instagram`,
       options: {

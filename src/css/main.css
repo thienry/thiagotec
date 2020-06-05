@@ -124,6 +124,9 @@ p {
     line-height: 1;
   }
 }
+.disqus-container {
+  margin-top: 5rem;
+}
 /*  global classes */
 
 .btn {
