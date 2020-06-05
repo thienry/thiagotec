@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import { Disqus } from 'gatsby-plugin-disqus'
 
 import Layout from '../components/layout/layout'
+import Title from '../components/layout/Title'
 import SEO from '../components/utils/seo'
 
 function blogTemplate({ data }) {
@@ -15,11 +16,12 @@ function blogTemplate({ data }) {
     identifier: id,
     title: title,
   }
-
+  
   return (
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
       <SEO title={title} description={description} />
       <section className="blog-template">
+        <Title title={title} />
         <div className="section-center blog-post">
           <article className="blog-content">
             <ReactMarkdown source={content} />
