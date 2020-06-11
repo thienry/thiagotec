@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import SocialLinks from '../../constants/socialLinks'
 
 function Hero() {
@@ -7,9 +8,43 @@ function Hero() {
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
-            <div className="underline"></div>
-            <h1>Thiago Moura</h1>
-            <h4>Desenvolvedor Frontend Web & Mobile</h4>
+            <motion.div className="underline"
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 4
+              }}
+            ></motion.div>
+            
+            <motion.h1 
+              initial= {{
+                x: '-100vw'
+
+              }}        
+              animate= {{ 
+                x: 0
+              }}
+            >
+              Thiago Moura
+            </motion.h1>
+            <motion.h4
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 4
+              }}
+            >
+              Desenvolvedor Frontend Web & Mobile
+            </motion.h4>
+
             <SocialLinks />
           </div>
         </article>
