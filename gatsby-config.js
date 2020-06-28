@@ -3,6 +3,7 @@ module.exports = {
     title: `ThiagoTec`,
     description: `A portfolio & blog personal site.`,
     author: `@thienry`,
+    twitterUsername: "@thienry14",
     siteUrl: `https://thiagotec.com`,
     image: `/thiagotec.png`
   },

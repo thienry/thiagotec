@@ -9,25 +9,26 @@ function SEO({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
+            siteTitle: title
+            siteDesc: description
             author
             image
             siteUrl
+            twitterUsername
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.siteDesc
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: "pt-br ",
       }}
-      title={title}
+      title={`${title} | ${site.siteMetadata.siteTitle}`}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
@@ -52,7 +53,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.twitterUsername,
         },
         {
           name: `twitter:title`,
