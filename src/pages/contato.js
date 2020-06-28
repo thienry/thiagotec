@@ -39,7 +39,7 @@ function Contact() {
 
   return (
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
-      <SEO title='Contato' />
+      <SEO title='Contato' description="Entre em contato" />
       <section className="contact-page">
         <article className="contact-form">
           <h3>Entre em contato</h3>

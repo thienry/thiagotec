@@ -6,7 +6,7 @@ import SEO from '../components/utils/seo'
 
 const NotFoundPage = () => (
   <Layout styleContainer="page-container" styleNav='nav-bg-color'>
-    <SEO title="404: Not found" />
+    <SEO title="404: Not found" description="Houston, we have a problem..."  />
     <main className="error-page">
       <div className="error-container">
         <h1>oops, parece que você está perdido...</h1>

@@ -10,7 +10,7 @@ function ProjectsPage({ data }) {
 
   return (
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
-      <SEO title='Projetos' />
+      <SEO title='Projetos' description="Dá uma olhadinha nos meus projetos!"  />
       <section className="projects-page">
         <Projects projects={projects} title='Projetos' />
       </section>

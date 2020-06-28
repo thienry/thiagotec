@@ -11,7 +11,7 @@ const about = ({ data: { allStrapiAbout: { nodes } } }) => {
 
   return (
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
-      <SEO title='Sobre' />
+      <SEO title='Sobre' description="Sobre mim"  />
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />
