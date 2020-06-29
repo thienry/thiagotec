@@ -35,8 +35,8 @@ function blogTemplate({ data }) {
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
       <SEO title={title} description={description} blogPost={src} />
       <section className="blog-template">
-        <Title title={title} />
         <div className="section-center blog-post">
+          <Title title={title} />
           <article className="blog-content">
             <ReactMarkdown source={content} />
           </article>
