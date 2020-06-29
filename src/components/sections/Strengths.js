@@ -6,7 +6,7 @@ import strengths from '../../constants/strengths'
 function Strengths() {
   return (
     <section className="section bg-grey">
-      <Title title='Fortalezas' />
+      <Title title='Skills' />
       <div className="section-center strengths-center">
         {strengths.map((strength) => {
           const { id, icon, text, title } = strength
@@ -15,7 +15,6 @@ function Strengths() {
               {icon}
               <h4>{title}</h4>
               <div className="underline"></div>
-              <p>{text}</p>
             </article>
           )
         })}

@@ -575,6 +575,9 @@ Services
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
+.strength svg {
+  font-size: 4rem;
+}
 .strength .underline {
   width: 3rem;
   height: 0.12rem;
