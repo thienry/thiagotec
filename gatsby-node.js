@@ -4,20 +4,37 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      blogs: allStrapiBlogs {
+      posts: allStrapiBlogs {
         nodes {
           slug
         }
+        totalCount
       }
     }
   `)
 
-  result.data.blogs.nodes.forEach(blog => {
+  const postsPerPage = 12
+  const numPages = Math.ceil(result.data.posts.totalCount / postsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: `/blogs/${blog.slug}`,
+      path: i === 0 ? `/blog` : `/blog/page/${i + 1}`,
+      component: path.resolve("src/templates/blog-list-template.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+
+  result.data.posts.nodes.forEach(post => {
+    createPage({
+      path: `/blog/${post.slug}`,
       component: path.resolve(`src/templates/blog-template.js`),
       context: {
-        slug: blog.slug,
+        slug: post.slug,
       }
     })
   })

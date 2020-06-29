@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 
 function Blog({ id, title, image, date, category, slug, description }) {
   return (
-    <Link to={`/blogs/${slug}`} key={id} className="blog">
+    <Link to={`/blog/${slug}`} key={id} className="blog">
       <article>
         <Image fluid={image.childImageSharp.fluid} className="blog-img" />
         <div className="blog-card">

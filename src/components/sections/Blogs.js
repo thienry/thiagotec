@@ -22,7 +22,7 @@ function Blogs({ blogs, pageTitle, showLink }) {
 }
 
 Blogs.propTypes = {
-  title: PropTypes.string.isRequired,
+  pageTitle: PropTypes.string.isRequired,
 }
 
 export default Blogs

@@ -869,6 +869,7 @@ main .blog-section {
 }
 .blog-card h4 {
   color: var(--clr-grey-1);
+  line-height: 1.5;
 }
 
 .blog-footer {
@@ -892,6 +893,26 @@ main .blog-section {
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
+.blog-list-pagination {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 8rem;
+  margin-top: -2rem;
+}
+
+.blog-list-pagination svg {
+  padding-top: .25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-list-pagination {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .blogs-center {
     display: grid;
@@ -901,6 +922,7 @@ main .blog-section {
   .blog-img {
     height: 17.5rem;
   }
+  
 }
 @media screen and (min-width: 850px) {
   .blog-img {
