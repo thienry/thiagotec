@@ -8,9 +8,23 @@ import Title from '../components/layout/Title'
 import SEO from '../components/utils/seo'
 
 function blogTemplate({ data }) {
-  const { content, title, description, id, slug } = data.blog
-  const { siteUrl } = data.site.siteMetadata
+  const { 
+    content, 
+    title, 
+    description, 
+    id, 
+    slug, 
+    image: { 
+      childImageSharp: {
+        fluid: {
+          src
+        }
+      }
+    } 
+  } = data.blog
 
+  const { siteUrl } = data.site.siteMetadata
+  
   let disqusConfig = {
     url: `${siteUrl}/blogs/${slug}`,
     identifier: id,
@@ -19,7 +33,7 @@ function blogTemplate({ data }) {
   
   return (
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} blogPost={src} />
       <section className="blog-template">
         <Title title={title} />
         <div className="section-center blog-post">
@@ -43,6 +57,13 @@ export const query = graphql`
       description
       id
       slug
+      image {
+        childImageSharp {
+          fluid {
+            src
+          }
+        }
+      }
     }
 
     site {

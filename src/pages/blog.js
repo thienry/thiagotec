@@ -12,7 +12,7 @@ function blogPage({ data }) {
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
       <SEO title='Blog' description="Blog de Tecnologia" />
       <section className="blog-page">
-        <Blogs blogs={blogs} />
+        <Blogs blogs={blogs} pageTitle="Blog"/>
       </section>
     </Layout>
   )

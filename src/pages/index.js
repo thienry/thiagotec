@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title='Home' description="Site Portfolio e Blog de Tecnologia" />
       <Hero />
-      <Blogs blogs={blogs} title='Últimos artigos' showLink />
+      <Blogs blogs={blogs} pageTitle='Últimos artigos' showLink />
       <Jobs />
       <Strengths />
       <Projects projects={projects} title='Alguns Projetinhos' showLink />
