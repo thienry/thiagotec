@@ -8,8 +8,8 @@ function Strengths() {
     <section className="section bg-grey">
       <Title title='Skills' />
       <div className="section-center strengths-center">
-        {strengths.map((strength) => {
-          const { id, icon, text, title } = strength
+        {strengths.map(strength => {
+          const { id, icon, title } = strength
           return (
             <article key={id} className='strength'>
               {icon}

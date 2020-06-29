@@ -1,41 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
 
+import { useForm } from '../components/utils/hooks'
 import Layout from '../components/layout/layout'
 import SEO from '../components/utils/seo'
 
 function Contact() {
-  const [contactForm, setContactForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-  const [errMsg, setErrMsg] = useState({
-    errMsgName: "",
-    errMsgEmail: "",
-    errMsgMessage: "",
-  })
+  function validateContactForm(values) {
+    let errors = {}
 
-  const { name, email, message } = contactForm
-  const { errMsgName, errMsgEmail, errMsgMessage } = errMsg
+    const strippedName = values.name.trim().replace(/<\/?[^>]+(>|$)/g, '')
+    const strippedEmail = values.email.trim().replace(/<\/?[^>]+(>|$)/g, '')
+    const strippedMessage = values.message.trim().replace(/<\/?[^>]+(>|$)/g, '')
 
-  function onChange(e) {
-    setContactForm({ ...contactForm, [e.target.name]: e.target.value })
-  };
+    if (strippedName === '') errors.name = 'Por favor, preencha o campo nome.'
+    if (strippedEmail === '') errors.email = 'Por favor, preencha o campo email.'
+    if (strippedMessage === '') errors.message = 'Por favor, preencha o campo mensagem.'
 
-  function onValidationChange(e) {
-    if (name === '' || email === '' || message === '') {
-      setErrMsg({ ...errMsg, [e.target.name]: 'Por favor preencha o campo acima.' })
-    } else {
-      setErrMsg(null)
-    }
+    return errors
   }
 
-  function onSubmit(e) {
-    if (name === '' || email === '' || message === '') {
-      e.preventDefault()
-      setErrMsg({ ...errMsg, [e.target.name]: 'Por favor preencha o campo acima.' })
-    }
-  }
+  const { values, errors, onChange, onSubmit } = 
+    useForm({ name: '', email: '', message: '' }, validateContactForm)
 
   return (
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
@@ -45,15 +30,14 @@ function Contact() {
           <h3>Entre em contato</h3>
           <form onSubmit={onSubmit} action="https://formspree.io/xnqgpwjp" method="POST">
             <div className="form-group">
-              <input type="text" name="name" value={name} onChange={onChange} placeholder="nome" className="form-control" />
-              {errMsgName && (<span className="form-validation" onChange={onValidationChange}>{errMsgName}</span>)}
+              <input type="text" name="name" value={values.name} onChange={onChange} placeholder="nome" className="form-control" aria-label="name" />
+              {errors.name && (<span className="form-validation">{errors.name}</span>)}
 
-              <input type="email" name="email" value={email} onChange={onChange} placeholder="email" className="form-control" />
-              {errMsgEmail && (<span className="form-validation" onChange={onValidationChange}>{errMsgEmail}</span>)}
+              <input type="email" name="email" value={values.email} onChange={onChange} placeholder="email" className="form-control" aria-label="email" />
+              {errors.email && (<span className="form-validation">{errors.email}</span>)}
 
-              <textarea name="message" rows="5" value={message} onChange={onChange} placeholder="Mensagem" className="form-control"></textarea>
-              {errMsgMessage && (<span className="form-validation" onChange={onValidationChange}>{errMsgMessage}</span>)}
-
+              <textarea name="message" rows="5" value={values.message} onChange={onChange} placeholder="Mensagem" className="form-control" aria-label="message" ></textarea>
+              {errors.message && (<span className="form-validation">{errors.message}</span>)}
             </div>
             <button type="submit" className="submit-btn btn">Enviar</button>
           </form>
