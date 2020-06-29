@@ -11,7 +11,7 @@ function Blogs({ blogs, title, showLink }) {
       <Title title={title} />
       <div className="section-center blogs-center">
         {blogs.map(blog => (
-          <Blog key={blog.id} {...blog} title="blog" />
+          <Blog key={blog.id} {...blog} />
         ))}
       </div>
       {showLink && (
