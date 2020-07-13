@@ -15,7 +15,7 @@ function Blogs({ blogs, pageTitle, showLink }) {
         ))}
       </div>
       {showLink && (
-        <Link to="/blog" className="btn center-btn">Blog</Link>
+        <Link to="/blog" className="btn center-btn" activeClassName="nav-active">Blog</Link>
       )}
     </section>
   )

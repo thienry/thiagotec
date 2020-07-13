@@ -5,7 +5,7 @@ import { FaAlignRight } from 'react-icons/fa'
 
 import PageLinks from '../../constants/links'
 
-function Navbar({ siteTitle, toggleSidebar, styleNav }) {
+function Navbar({ siteTitle, toggleSidebar, styleNav, isActive }) {
   return (
     <nav className={`navbar ${styleNav ? styleNav : ''}`}>
       <div className="nav-center">
@@ -17,7 +17,7 @@ function Navbar({ siteTitle, toggleSidebar, styleNav }) {
             <FaAlignRight />
           </button>
         </div>
-        <PageLinks styleClass='nav-links' />
+        <PageLinks isActive={isActive} styleClass='nav-links' />
       </div>
     </nav>
   )

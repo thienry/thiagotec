@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const data = [
+export const data = [
   {
     id: 1,
     text: 'home',
@@ -10,29 +10,29 @@ const data = [
   {
     id: 2,
     text: 'blog',
-    url: '/blog'
+    url: '/blog/'
   },
   {
     id: 3,
     text: 'Projetos',
-    url: '/projetos'
+    url: '/projetos/'
   },
   {
     id: 4,
     text: 'sobre',
-    url: '/sobre'
+    url: '/sobre/'
   },
   {
     id: 5,
     text: 'contato',
-    url: '/contato'
+    url: '/contato/'
   },
 ]
 
 const tmpLinks = data.map(link => {
   return (
-    <li key={link.id} className='nav-li'>
-      <Link to={link.url}>{link.text}</Link>
+    <li key={link.id} className={`nav-li`}>
+      <Link to={link.url} activeClassName="nav-active">{link.text}</Link>
     </li>
   )
 })
