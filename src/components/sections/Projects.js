@@ -15,7 +15,7 @@ function Projects({ projects, title, showLink }) {
         ))}
       </div>
       {showLink && (
-        <Link to='/projetos' className="btn center-btn" activeClassName="nav-active">
+        <Link to="/projetos/" className="btn center-btn" activeClassName="nav-active">
           projetos
         </Link>
       )}
