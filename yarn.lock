@@ -1662,6 +1662,16 @@
   resolved "https://registry.yarnpkg.com/@kwsites/exec-p/-/exec-p-0.4.0.tgz#ab3765d482849ba6e825721077c248cf9f3323b7"
   integrity sha512-44DWNv5gDR9EwrCTVQ4ZC99yPqVS0VCWrYIBl45qNR8XQy+4lbl0IQG8kBDf6NHwj4Ib4c2z1Fq1IUJOCbkZcw==
 
+"@mdi/js@^5.3.45":
+  version "5.3.45"
+  resolved "https://registry.yarnpkg.com/@mdi/js/-/js-5.3.45.tgz#c6f523311bf77e339051e24aaa3eddabf565a027"
+  integrity sha512-r05JoeUhokSERwW6yYi3WcKCBePHHqBvIikOD0X/dWyaZb6gIRth5Lya7VVTItvGo1qlpp8LpMJKmE6o49+G+Q==
+
+"@mdi/react@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@mdi/react/-/react-1.4.0.tgz#7f6bad1bd8801226d0e5bad91659b215ce68a93f"
+  integrity sha512-OUH9RhfDJPhybQL3owwrSDIXz2yVKXg5lYeOZjyRCiT9wqywNK0FeYyDByOwNIZnnIQoQYmuSrMv+pOX0Uqkmw==
+
 "@mdx-js/mdx@^1.6.5":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.5.tgz#4e00ca5d38d678c6070d73819bb696e4030e2662"

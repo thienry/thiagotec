@@ -1,24 +1,19 @@
 import React from 'react'
-import {
-  DiW3C,
-  DiJsBadge,
-  DiNodejsSmall,
-  DiReact,
-  DiAngularSimple,
-  DiIonic
-} from 'react-icons/di'
+import Icon from '@mdi/react';
+import { mdiLanguageTypescript } from '@mdi/js'; 
+import { DiJsBadge, DiNodejsSmall, DiReact, DiAngularSimple, DiIonic } from 'react-icons/di'
 
 export default [
   {
     id: 1,
-    icon: <DiW3C />,
-    title: 'HTML + CSS',
+    icon: <DiJsBadge />,
+    title: 'Javascript',
     text: ``,
   },
   {
     id: 2,
-    icon: <DiJsBadge />,
-    title: 'Javascript',
+    icon: <DiNodejsSmall />,
+    title: 'NodeJS',
     text: ``,
   },
   {
@@ -29,8 +24,8 @@ export default [
   },
   {
     id: 4,
-    icon: <DiNodejsSmall />,
-    title: 'NodeJS',
+    icon: <Icon path={mdiLanguageTypescript} size={'66px'}/>,
+    title: 'Typescript',
     text: ``,
   },
   {
