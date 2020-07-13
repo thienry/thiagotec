@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout/layout'
 import SEO from '../components/utils/seo'
 import Hero from '../components/sections/Hero'
-import Strengths from '../components/sections/Strengths'
 import Jobs from '../components/sections/Jobs'
-import Projects from '../components/sections/Projects'
 import Blogs from '../components/sections/Blogs'
+import Layout from '../components/layout/layout'
+import Projects from '../components/sections/Projects'
+import Strengths from '../components/sections/Strengths'
 
 const IndexPage = ({ data }) => {
   const {
@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
     allStrapiBlogs: { nodes: blogs }
   } = data
 
-  return (
+   return (
     <Layout>
       <SEO title='Home' description="Site Portfolio e Blog de Tecnologia" />
       <Hero />

@@ -46,6 +46,10 @@ Global Styles
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--ff-primary);
@@ -56,7 +60,7 @@ body {
   margin-top: 5rem;
 }
 .content {
-  min-height: calc(100vh - 11rem);
+  min-height: calc(100vh - 12.5rem);
 }
 footer {
   height: 6rem;
@@ -973,7 +977,7 @@ Footer
 @media screen and (max-width: 992px) {
   .section-footer {
     padding: 2rem auto;
-    min-height: 10rem;
+    min-height: 14rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1188,4 +1192,34 @@ Blog Template
   .blog-template .blog-post{
     max-width: 768px;
   }
+}
+
+.scroll-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  right: 2rem;
+  bottom: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .5rem;
+  z-index: 9999;
+  background: var(--clr-primary-5);
+  transition: ease-in-out 300ms;
+}
+
+.scroll-fadeout {
+  transition: ease-in-out 400ms;
+  opacity: 0;
+}
+
+.scroll-to-top:hover {
+  background: var(--clr-primary-2);
+}
+
+.scroll-to-top svg {
+  font-weight: 800;
+  color: var(--clr-white);
 }
