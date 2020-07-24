@@ -52,7 +52,7 @@ function Hero() {
             <motion.a
               animate={{
                 transition: { yoyo: Infinity },
-                y: 15, y: -10,
+                y: [10, -10],
               }}
               className="hero-next" href="#articles">
               <FaChevronDown />

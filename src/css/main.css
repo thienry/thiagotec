@@ -478,7 +478,7 @@ Hero
 }
 
 .hero-center {
-  height: 90%;
+  height: 85%;
   display: grid;
   align-items: center;
 }
@@ -1256,7 +1256,9 @@ Blog Template
   color: var(--clr-primary-5);
 }
 
-
+.hero-next svg {
+  transition: ease-in-out 300ms;
+}
 
 .hero-next svg:hover {
   color: var(--clr-white);
