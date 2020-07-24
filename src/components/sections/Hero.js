@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { FaChevronDown } from 'react-icons/fa'
+
 import SocialLinks from '../../constants/socialLinks'
 
 function Hero() {
@@ -19,13 +21,13 @@ function Hero() {
                 duration: 4
               }}
             ></motion.div>
-            
-            <motion.h1 
-              initial= {{
+
+            <motion.h1
+              initial={{
                 x: '-100vw'
 
-              }}        
-              animate= {{ 
+              }}
+              animate={{
                 x: 0
               }}
             >
@@ -46,6 +48,15 @@ function Hero() {
             </motion.h4>
 
             <SocialLinks />
+
+            <motion.a
+              animate={{
+                transition: { yoyo: Infinity },
+                y: 15, y: -10,
+              }}
+              className="hero-next" href="#articles">
+              <FaChevronDown />
+            </motion.a>
           </div>
         </article>
       </div>

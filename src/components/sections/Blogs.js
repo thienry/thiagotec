@@ -7,7 +7,7 @@ import Blog from '../utils/Blog'
 
 function Blogs({ blogs, pageTitle, showLink }) {
   return (
-    <section className="section blog-section">
+    <section id="articles" className="section blog-section">
       <Title title={pageTitle} />
       <div className="section-center blogs-center">
         {blogs.map(blog => (
