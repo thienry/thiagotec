@@ -867,7 +867,7 @@ main .blog-section {
 }
 .blog:hover {
   box-shadow: var(--dark-shadow);
-  transform: scale(1.02);
+  transform: scale(1.1);
 }
 .blog article {
   height: 100%;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import ReactMarkdown from 'react-markdown'
 import { Disqus } from 'gatsby-plugin-disqus'
 
@@ -8,29 +8,29 @@ import Title from '../components/layout/Title'
 import SEO from '../components/utils/seo'
 
 function blogTemplate({ data }) {
-  const { 
-    content, 
-    title, 
-    description, 
-    id, 
-    slug, 
-    image: { 
+  const {
+    content,
+    title,
+    description,
+    id,
+    slug,
+    image: {
       childImageSharp: {
         fluid: {
           src
         }
       }
-    } 
+    }
   } = data.blog
 
   const { siteUrl } = data.site.siteMetadata
-  
+
   let disqusConfig = {
     url: `${siteUrl}/blogs/${slug}`,
     identifier: id,
     title: title,
   }
-  
+
   return (
     <Layout styleContainer="page-container" styleNav='nav-bg-color'>
       <SEO title={title} description={description} blogPost={src} />
@@ -40,6 +40,7 @@ function blogTemplate({ data }) {
           <article className="blog-content">
             <ReactMarkdown source={content} />
           </article>
+          <Link to="/blog/" className="btn center-btn" activeClassName="nav-active">Lista de Posts</Link>
           <div className="disqus-container">
             <Disqus config={disqusConfig} />
           </div>
