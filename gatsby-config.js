@@ -22,12 +22,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
-        short_name: `starter`,
+        short_name: `Thiagotec`,
         start_url: `/`,
-        background_color: `#1f4068`,
-        theme_color: `#1f4068`,
+        background_color: `#FF8585`,
+        theme_color: `#FF8585`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/thiagotec.png`, // This path is relative to the root of the site.
       },
     },
     {
