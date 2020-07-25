@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Thiagotec`,
         short_name: `Thiagotec`,
         start_url: `/`,
         background_color: `#FF8585`,
