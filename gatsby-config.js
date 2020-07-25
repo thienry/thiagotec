@@ -24,8 +24,8 @@ module.exports = {
         name: `Thiagotec`,
         short_name: `Thiagotec`,
         start_url: `/`,
-        background_color: `#FF8585`,
-        theme_color: `#FF8585`,
+        background_color: `#1f4068`,
+        theme_color: `#1f4068`,
         display: `minimal-ui`,
         icon: `src/images/thiagotec.png`, // This path is relative to the root of the site.
       },
