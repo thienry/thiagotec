@@ -44,7 +44,7 @@ function Hero() {
                 duration: 4
               }}
             >
-              Desenvolvedor Frontend Web & Mobile
+              Desenvolvedor Fullstack Javascript
             </motion.h4>
 
             <SocialLinks />
