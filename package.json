@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Thiago Moura <thmoura14@gmail.com>",
   "dependencies": {
+    "@el7cosmos/gatsby-plugin-prefetch-google-fonts": "^2.0.3",
     "@mdi/js": "^5.3.45",
     "@mdi/react": "^1.4.0",
     "framer-motion": "^1.11.0",
