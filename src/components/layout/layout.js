@@ -37,7 +37,7 @@ const Layout = ({ children, styleNav, styleContainer, isActive }) => {
       scrollTop.classList.toggle('scroll-to-top', window.scrollY > 700)
       scrollTop.classList.toggle('scroll-fadeout', window.scrollY < 800)
     })
-  })
+  }, [])
 
   function toggleSidebar() {
     setIsOpen(!isOpen)
