@@ -18,7 +18,6 @@ const Layout = ({ children, styleNav, styleContainer, isActive }) => {
     }
   `)
 
-  const window = window
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
