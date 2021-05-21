@@ -50,7 +50,7 @@ const Layout = ({ children, styleNav, styleContainer, isActive }) => {
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         <main>{children}</main>
       </div>
-      {window.scrollY > 0 && <ScrollToTop />}
+      <ScrollToTop />
       <Footer />
     </>
   )
